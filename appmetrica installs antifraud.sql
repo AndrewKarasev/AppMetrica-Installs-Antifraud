@@ -34,6 +34,7 @@ FROM
     SETTINGS join_use_nulls = 1
 )
 WHERE
-((device_id IS NOT NULL) AND (mcc_mnc > 0) AND (os_name = profiles_os_name))
-OR
 (client_id IS NOT NULL) OR (gold_id IS NOT NULL)
+OR
+((device_id IS NOT NULL) AND (mcc_mnc > 0) AND (os_name = profiles_os_name))
+
